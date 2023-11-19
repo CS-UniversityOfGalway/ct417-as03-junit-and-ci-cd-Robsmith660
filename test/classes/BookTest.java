@@ -1,43 +1,43 @@
 package classes;
-
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 class BookTest {
-
-	// You should refer to the WK09 Security Testing for details regarding the Input-Test Type
-	// Feel free to use any inputs, as long as they are logical.
-	//
+	
+	Genre genre = new Fantasy();
+	Book book = new Book("The Alchemist", "Paulo Coelho", 1988, 4, 163, genre);
+	
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
 	}
 
-	// TODO: Normal input testing - use the expected values when instantiating the object 
 	@Test
 	void testBook() {
-		fail("Not yet implemented");
+	    assertEquals("The Alchemist", book.getTitle());
+	    assertEquals("Paulo Coelho", book.getAuthor());
+	    assertEquals(4, book.getRating());
+	    assertEquals(163, book.getNoPages());
 	}
 
-	// TODO: Invalid input testing - you should not be able to use null as page number
 	@Test
-	void testGetNoPages() {
-		fail("Not yet implemented");
+	void testGetNoPagesInvalidInput() {
+		Integer nullValue = null;
+	    assertThrows(IllegalArgumentException.class, () -> new Book("The Alchemist", "Paulo Coelho", 1988, 4, nullValue, genre));
 	}
 
-	// TODO: Boundary input testing - How can you test for the maximum number of pages that you can
-	// assign to the variable (clue: you can exploit the limit associated with the respective Java variable type OR
-	// use various input values that can be associated with the logical limit of the variable)
+
 	@Test
 	void testGetAuthor() {
-		fail("Not yet implemented");
+		String longAuthorName = "A".repeat(50);
+		assertThrows(Exception.class, () -> new Book("The Alchemist", longAuthorName, 1988, 4, 163, genre));
 	}
 
-	// TODO: Use getters to construct the output string - given the Normal input, you should pass this unit test
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		Book book = new Book("The Alchemist", "Paulo Coelho", 1988, 4, 163, genre);
+		String expectedToString = book.title + " by " + book.getAuthor() + " price at = " + book.getPrice();
+		assertEquals(expectedToString, book.toString());
 	}
 
 	// TO-NOT-DO ;)

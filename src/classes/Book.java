@@ -31,9 +31,13 @@ public class Book extends Media {
 	// TODO complete the static factory of() method
 	// Return a new object if the genre is correct, or throw an IllegalArgumentException with the message "Genre is invalid"
 	public static Book of(String title, String author, int year, int rating, int noPages, Genre genre) {
+		
 		if (genre.getClass().equals(Fantasy.class) || genre.getClass().equals(Autobiography.class))
 			return new Book(title, author, year, rating, noPages, genre);
 		else
 			throw new IllegalArgumentException("Genre is invalid");
 	}
+
+	
+	
 }
