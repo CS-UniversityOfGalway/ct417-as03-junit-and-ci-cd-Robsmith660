@@ -1,7 +1,9 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/afjmL-Jg)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=12778902)
 ## CT417: Software Engineering III
-* Name: _Fill up your name here_
-* Student Id: _Fill you your Student-Id_
-* Code coverage percentage: _Enter value here_
+* Name: Robert Smith
+* Student Id: 20337801
+* Code coverage percentage: 58.3%
 
 This is a repository for CT417 assignment. You will find a simple TimeTableApp for you to use in your CI/CD pipeline. Like all great trilogy (Star Wars I – VI :+1:, yes I – III are counted as canon, but never VII – IX :-1:), this assignment will be performed in various sub-parts. 
 
